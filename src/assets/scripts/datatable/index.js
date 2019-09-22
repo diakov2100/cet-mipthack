@@ -38,7 +38,25 @@ export default (function () {
 	});
 			$( "#br" ).on('input', function () {
 				$("#br_val").html('$' + $("#br").val());
+				setPrice();
 			});
+			function setPrice()	{
+				var p1 = Math.round(2450 * 2400);
+				var p2 = Math.round((2450 + 1300 +  2050)* 2400);
+				var p3 = Math.round((2450 + 1300 +  2050 + 1150)* 2400);
+
+				var price1 = Math.round(860 * 100 * 0.7 * $("#br").val() - 2450 * 2400);
+				var price2 = Math.round(860 * 100 * 0.7 * $("#br").val() - (2450 + 1300 +  2050)* 2400);
+				var price3 = Math.round(860 * 100 * 0.7 * $("#br").val() - (2450 + 1300 +  2050 + 1150)* 2400);
+
+				$("#pr1").html("$" + p1);
+				$("#pr2").html("$" + p2);
+				$("#pr3").html("$" + p3);
+
+				$("#min").html("$" + price3);
+				$("#max").html("$" + price1);
+			}
+			setPrice();
 
 	 }
 }());
