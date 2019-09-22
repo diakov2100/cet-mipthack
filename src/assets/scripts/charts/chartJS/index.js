@@ -1,0 +1,338 @@
+import Chart from 'chart.js';
+import { COLORS } from '../../constants/colors';
+import CanvasJS from './canvasjs.min.js';
+
+export default (function () {
+
+var url_string = window.location.href;
+var url = new URL(url_string);
+var c = url.searchParams.get("v1");
+if (c) {
+  document.getElementById("head").innerHTML = "Данные по Well #" + c;
+console.log(c);
+    // Initialize a Line chart in the container with the ID chart1
+
+var chart = new CanvasJS.Chart("chart1", {
+  animationEnabled: true,
+  theme: "light2",
+  title:{
+    text: "GZ1"
+  },
+  axisY:{
+    includeZero: false
+  },
+  data: [{        
+    type: "line",       
+    dataPoints: [
+        {x: 0.0, y: -2465.00},
+        {x: 0.6651979286673, y: -2465.546},
+        {x: 0.1151528258196, y: -2465.646},
+        {x: 0.15525366187725, y: -2465.746},
+        {x: 0.1253146285666, y: -2465.8145},
+        {x: 0.0, y: -2467},
+    ]
+  }]
+});
+chart.render();
+
+var chart = new CanvasJS.Chart("chart2", {
+  animationEnabled: true,
+  theme: "light2",
+  title:{
+    text: "GZ2"
+  },
+  axisY:{
+    includeZero: false
+  },
+  data: [{        
+    type: "line",       
+    dataPoints: [
+        {x: 0.0, y: -2465.00},
+        {x: 0.6651979286673, y: -2465.546},
+        {x: 0.1151528258196, y: -2465.646},
+        {x: 0.15525366187725, y: -2465.746},
+        {x: 0.1253146285666, y: -2465.8145},
+        {x: 0.0, y: -2467},
+    ]
+  }]
+});
+chart.render();
+
+var chart = new CanvasJS.Chart("chart3", {
+  animationEnabled: true,
+  theme: "light2",
+  title:{
+    text: "GZ3"
+  },
+  axisY:{
+    includeZero: false
+  },
+  data: [{        
+    type: "line",       
+    dataPoints: [
+        {x: 0.0, y: -2465.00},
+        {x: 0.6651979286673, y: -2465.546},
+        {x: 0.1151528258196, y: -2465.646},
+        {x: 0.15525366187725, y: -2465.746},
+        {x: 0.1253146285666, y: -2465.8145},
+        {x: 0.0, y: -2467},
+    ]
+  }]
+});
+chart.render();
+
+var chart = new CanvasJS.Chart("chart4", {
+  animationEnabled: true,
+  theme: "light2",
+  title:{
+    text: "GZ4"
+  },
+  axisY:{
+    includeZero: false
+  },
+  data: [{        
+    type: "line",       
+    dataPoints: [
+    ]
+  }]
+});
+
+chart.render();
+var chart = new CanvasJS.Chart("chart5", {
+  animationEnabled: true,
+  theme: "light2",
+  title:{
+    text: "GZ5"
+  },
+  axisY:{
+    includeZero: false
+  },
+  data: [{        
+    type: "line",       
+    dataPoints: [
+    ]
+  }]
+});
+
+chart.render();
+var chart = new CanvasJS.Chart("chart6", {
+  animationEnabled: true,
+  theme: "light2",
+  title:{
+    text: "GZ6"
+  },
+  axisY:{
+    includeZero: false
+  },
+  data: [{        
+    type: "line",       
+    dataPoints: [
+    ]
+  }]
+});
+chart.render();
+
+var chart = new CanvasJS.Chart("bar", {
+  animationEnabled: true,
+  title:{
+    text: "Model",
+  },
+  theme: "light2",
+  axisX: {
+    interval: 0,
+  },
+  axisY:{
+       title: "",
+       tickLength: 0,
+       lineThickness:0,
+       margin:0,
+       valueFormatString:" " //comment this to show numeric values
+  },
+  data: [{
+    type: "stackedColumn",
+    showInLegend: false,
+    color: "#212529",
+    name: "Q1",
+    dataPoints: [
+      { y: -2465.00},
+    ]
+    },
+    {        
+      type: "stackedColumn",
+      showInLegend: false,
+      name: "Q2",
+      color: "#388e3c",
+      dataPoints: [
+        { y: -2465.446},
+      ]
+    },
+    {        
+      type: "stackedColumn",
+      showInLegend: false,
+      name: "Q3",
+      color: "#212529",
+      dataPoints: [
+        { y: -2465.646},
+      ]
+    },
+    {        
+      type: "stackedColumn",
+      showInLegend: false,
+      name: "Q4",
+      color: "#212529",
+      dataPoints: [
+        { y: -2467},
+      ]
+  }]
+});
+chart.render();
+
+
+
+  // ------------------------------------------------------
+  // @Line Charts
+  // ------------------------------------------------------
+
+  const lineChartBox = document.getElementById('line-chart');
+
+  if (lineChartBox) {
+    const lineCtx = lineChartBox.getContext('2d');
+    lineChartBox.height = 80;
+
+    new Chart(lineCtx, {
+      type: 'line',
+      data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+          label                : 'Series A',
+          backgroundColor      : 'rgba(237, 231, 246, 0.5)',
+          borderColor          : COLORS['deep-purple-500'],
+          pointBackgroundColor : COLORS['deep-purple-700'],
+          borderWidth          : 2,
+          data                 : [60, 50, 70, 60, 50, 70, 60],
+        }, {
+          label                : 'Series B',
+          backgroundColor      : 'rgba(232, 245, 233, 0.5)',
+          borderColor          : COLORS['blue-500'],
+          pointBackgroundColor : COLORS['blue-700'],
+          borderWidth          : 2,
+          data                 : [70, 75, 85, 70, 75, 85, 70],
+        }],
+      },
+
+      options: {
+        legend: {
+          display: false,
+        },
+      },
+
+    });
+  }
+
+  // ------------------------------------------------------
+  // @Bar Charts
+  // ------------------------------------------------------
+
+  const barChartBox = document.getElementById('bar-chart');
+
+  if (barChartBox) {
+    const barCtx = barChartBox.getContext('2d');
+
+    new Chart(barCtx, {
+      type: 'bar',
+      data: {
+        labels: ['Risk Level'],
+        datasets: [
+          {
+            label: 'Low',
+            data: [67.8],
+            backgroundColor: '#D6E9C6',
+          },
+          {
+            label: 'Moderate',
+            data: [20.7],
+            backgroundColor: '#FAEBCC',
+          },
+          {
+            label: 'High',
+            data: [11.4],
+            backgroundColor: '#EBCCD1',
+          }
+        ]
+      },
+      options: {
+        scales: {
+          xAxes: [{ stacked: true }],
+          yAxes: [{ stacked: true }]
+        }
+      }
+});
+  }
+
+  // ------------------------------------------------------
+  // @Area Charts
+  // ------------------------------------------------------
+
+  const areaChartBox = document.getElementById('area-chart');
+
+  if (areaChartBox) {
+    const areaCtx = areaChartBox.getContext('2d');
+
+    new Chart(areaCtx, {
+      type: 'line',
+      data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+          backgroundColor : 'rgba(3, 169, 244, 0.5)',
+          borderColor     : COLORS['light-blue-800'],
+          data            : [10, 50, 20, 40, 60, 30, 70],
+          label           : 'Dataset',
+          fill            : 'start',
+        }],
+      },
+    });
+  }
+
+  // ------------------------------------------------------
+  // @Scatter Charts
+  // ------------------------------------------------------
+
+  const scatterChartBox = document.getElementById('scatter-chart');
+
+  if (scatterChartBox) {
+    const scatterCtx = scatterChartBox.getContext('2d');
+
+    Chart.Scatter(scatterCtx, {
+      data: {
+        datasets: [{
+          label           : 'My First dataset',
+          borderColor     : COLORS['red-500'],
+          backgroundColor : COLORS['red-500'],
+          data: [
+            { x: 10, y: 20 },
+            { x: 30, y: 40 },
+            { x: 50, y: 60 },
+            { x: 70, y: 80 },
+            { x: 90, y: 100 },
+            { x: 110, y: 120 },
+            { x: 130, y: 140 },
+          ],
+        }, {
+          label           : 'My Second dataset',
+          borderColor     : COLORS['green-500'],
+          backgroundColor : COLORS['green-500'],
+          data: [
+            { x: 150, y: 160 },
+            { x: 170, y: 180 },
+            { x: 190, y: 200 },
+            { x: 210, y: 220 },
+            { x: 230, y: 240 },
+            { x: 250, y: 260 },
+            { x: 270, y: 280 },
+          ],
+        }],
+      },
+    });
+  }
+  }
+}())
