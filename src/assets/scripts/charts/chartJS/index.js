@@ -4,8 +4,16 @@ import CanvasJS from './canvasjs.min.js';
 
 import "./owl.carousel.min.js";
 
-import {data} from "./test.js";
-
+import {data0} from "./data0.js";
+import {data01} from "./data01.js";
+import {data1} from "./data1.js";
+import {data11} from "./data11.js";
+import {data2} from "./data2.js";
+import {data21} from "./data21.js";
+import {data3} from "./data3.js";
+import {data31} from "./data31.js";
+import {data4} from "./data4.js";
+import {data41} from "./data41.js";
 
 export default (function () {
 
@@ -15,10 +23,35 @@ var c = url.searchParams.get("v1");
 if (c) {
   document.getElementById("head").innerHTML = "Данные по Well #" + c;
 console.log(c);
-console.log(data[0])
+let data = []
+let dataC = []
+if (c == '1'){
+  data = data0;
+  dataC = data01;
+}
+if (c == '2'){
+  data = data1;
+  dataC = data11;
+}
+if (c == '3'){
+  data = data2;
+  dataC = data21;
+}
+if (c == '4'){
+  data = data3;
+  dataC = data31;
+}
+if (c == '5'){
+  data = data4;
+  dataC = data41;
+}
 
+
+console.log(data[0])
+  document.getElementById("head").innerHTML ="Данные по Well #" + data[0]['well id ']
 let bk = []; 
 var GZ1 = [], GZ2 = [], GZ3 = [], GZ4 = [], GZ5 = [], GZ6 = [], GZ7= [], DGK= [], NKTM= [], NKTR= [], ALPS= []; 
+var val = 0;
 for (var item in data) {
   bk.push({x: data[item]['bk '], y: -data[item]['depth, m ']});
   GZ1.push({x: data[item]['GZ1 '], y: -data[item]['depth, m ']}) ;
@@ -31,7 +64,13 @@ for (var item in data) {
   NKTR.push({x: data[item]['NKTR '], y: -data[item]['depth, m ']}) ;
   ALPS.push({x: data[item]['ALPS '], y: -data[item]['depth, m ']}) ;
   NKTM.push({x: data[item]['NKTM '], y: -data[item]['depth, m ']}) ;
+  val += data[item]['goal ']
+
+
 }
+
+
+  document.getElementById("val").innerHTML ="Добывается нефти: " + val * 100 + "m3";
 
 var owl = $('.owl-carousel');
 
@@ -224,6 +263,40 @@ var chart = new CanvasJS.Chart("chart12", {
 chart.render();
 
 //second info
+
+
+bk = []; 
+GZ1 = [], GZ2 = [], GZ3 = [], GZ4 = [], GZ5 = [], GZ6 = [], GZ7= [], DGK= [], NKTM= [], NKTR= [], ALPS= [];
+data = []; 
+data = dataC;
+console.log(data[0])
+
+$('#cwell').html('Well #' + data[0]['well id '])
+for (var item in data) {
+  bk.push({x: data[item]['bk '], y: -data[item]['depth, m ']});
+  GZ1.push({x: data[item]['GZ1 '], y: -data[item]['depth, m ']}) ;
+  GZ2.push({x: data[item]['GZ2 '], y: -data[item]['depth, m ']}) ;
+  GZ3.push({x: data[item]['GZ3 '], y: -data[item]['depth, m ']}) ;
+  GZ4.push({x: data[item]['GZ4 '], y: -data[item]['depth, m ']}) ;
+  GZ5.push({x: data[item]['GZ5 '], y: -data[item]['depth, m ']}) ;
+  GZ7.push({x: data[item]['GZ7 '], y: -data[item]['depth, m ']}) ;
+  DGK.push({x: data[item]['DGK '], y: -data[item]['depth, m ']}) ;
+  NKTR.push({x: data[item]['NKTR '], y: -data[item]['depth, m ']}) ;
+  ALPS.push({x: data[item]['ALPS '], y: -data[item]['depth, m ']}) ;
+  NKTM.push({x: data[item]['NKTM '], y: -data[item]['depth, m ']}) ;
+}
+
+bk.sort((a,b) => (a.y > b.y) ? 1 : ((b.y > a.y) ? -1 : 0));
+GZ1.sort((a,b) => (a.y > b.y) ? 1 : ((b.y > a.y) ? -1 : 0));
+GZ2.sort((a,b) => (a.y > b.y) ? 1 : ((b.y > a.y) ? -1 : 0));
+GZ3.sort((a,b) => (a.y > b.y) ? 1 : ((b.y > a.y) ? -1 : 0));
+GZ4.sort((a,b) => (a.y > b.y) ? 1 : ((b.y > a.y) ? -1 : 0));
+GZ5.sort((a,b) => (a.y > b.y) ? 1 : ((b.y > a.y) ? -1 : 0));
+GZ7.sort((a,b) => (a.y > b.y) ? 1 : ((b.y > a.y) ? -1 : 0));
+DGK.sort((a,b) => (a.y > b.y) ? 1 : ((b.y > a.y) ? -1 : 0));
+NKTR.sort((a,b) => (a.y > b.y) ? 1 : ((b.y > a.y) ? -1 : 0));
+ALPS.sort((a,b) => (a.y > b.y) ? 1 : ((b.y > a.y) ? -1 : 0));
+NKTM.sort((a,b) => (a.y > b.y) ? 1 : ((b.y > a.y) ? -1 : 0));
 
 var chart = new CanvasJS.Chart("chart21", {
   animationEnabled: true,
