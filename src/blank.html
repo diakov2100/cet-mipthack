@@ -121,7 +121,7 @@
           <!-- ### $Sidebar Menu ### -->
           <ul class="sidebar-menu scrollable pos-r">
             <li class="nav-item mT-30 actived">
-              <a class="sidebar-link" href="index.html">
+              <a class="sidebar-link" href="blank.html">
                 <span class="icon-holder">
                   <i class="c-blue-500 ti-home"></i>
                 </span>
@@ -136,7 +136,7 @@
                 <span class="title">Email</span>
               </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" style="display: none;">
               <a class='sidebar-link' href="compose.html">
                 <span class="icon-holder">
                   <i class="c-blue-500 ti-share"></i>
@@ -168,7 +168,8 @@
                 <span class="title">Charts</span>
               </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" style="display: none;">
+            
               <a class='sidebar-link' href="forms.html">
                 <span class="icon-holder">
                   <i class="c-light-blue-500 ti-pencil"></i>
@@ -176,7 +177,8 @@
                 <span class="title">Forms</span>
               </a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item" style="display: none;">
+            
               <a class="sidebar-link" href="ui.html">
                 <span class="icon-holder">
                     <i class="c-pink-500 ti-palette"></i>
@@ -184,7 +186,8 @@
                 <span class="title">UI Elements</span>
               </a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item" style="display: none;">
+            
               <a class="dropdown-toggle" href="javascript:void(0);">
                 <span class="icon-holder">
                   <i class="c-orange-500 ti-layout-list-thumb"></i>
@@ -222,7 +225,8 @@
                 </li>
               </ul>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item" style="display: none;">
+            
               <a class="dropdown-toggle" href="javascript:void(0);">
                 <span class="icon-holder">
                     <i class="c-red-500 ti-files"></i>
@@ -232,10 +236,10 @@
                     <i class="ti-angle-right"></i>
                   </span>
               </a>
-              <ul class="dropdown-menu">                                
+              <ul class="dropdown-menu">
                 <li>
                   <a class='sidebar-link' href="blank.html">Blank</a>
-                </li>
+                </li>                 
                 <li>
                   <a class='sidebar-link' href="404.html">404</a>
                 </li>
@@ -250,7 +254,7 @@
                 </li>
               </ul>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item" style="display: none;">
               <a class="dropdown-toggle" href="javascript:void(0);">
                 <span class="icon-holder">
                   <i class="c-teal-500 ti-view-list-alt"></i>
@@ -527,13 +531,68 @@
                       <div class="layer w-100 p-20">
                         <h6 class="lh-1">Карта месторождения</h6>
                       </div>
-                        <div class="layer w-100 interactive-image" style="text-align: center;">
+                        <div class="layer w-100 interactive-image" style="text-align: left;">
                           <img src="assets/static/images/map.png">
+                          <div class="rounded-circle rd1" onclick="window.open(document.location.origin + '/charts.html?v1=1')"><span class="tooltiptext">Well #1</span></div>
+                          <div class="rounded-circle rd2" onclick="window.open(document.location.origin + '/charts.html?v1=2')"><span class="tooltiptext">Well #2</span></div>
+                          <div class="rounded-circle rd3" onclick="window.open(document.location.origin + '/charts.html?v1=3')"><span class="tooltiptext">Well #3</span></div>
+                          <div class="rounded-circle rd4" onclick="window.open(document.location.origin + '/charts.html?v1=4')"><span class="tooltiptext">Well #4</span></div>
+                          <div class="rounded-circle rd5" onclick="window.open(document.location.origin + '/charts.html?v1=5')"><span class="tooltiptext">Well #5</span></div>
                         </div>
                       </div>
                     </div>
 
                 </div>
+                <style type="text/css">
+                  .rounded-circle {
+                        position: absolute;
+                        height: 30px;
+                        width: 30px;
+                        top: 65px;
+                        background-color: #5ecaff;
+                        left: 595px;
+                        border: solid #03a9f4;
+                  }
+                  .rd1 {
+    top: 441px;
+    left: 274px;
+                  }
+                  .rd2 {
+top: 343px;
+    left: 534px;
+                  }
+                  .rd3 {
+top: 247px;
+    left: 219px;
+
+                  }
+                  .rd4 {
+top: 160px;
+    left: 526px;
+
+                  }
+                  .rd5 {top: 65px;
+    left: 331px;
+
+                  }
+                  .rounded-circle .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.rounded-circle:hover .tooltiptext {
+  visibility: visible;
+}
+                </style>
                 <div class="col-md-4  col-xl-4">
                   <!-- #Sales Report ==================== -->
                   <div class="bd bgc-white">

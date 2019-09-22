@@ -121,7 +121,7 @@
           <!-- ### $Sidebar Menu ### -->
           <ul class="sidebar-menu scrollable pos-r">
             <li class="nav-item mT-30 actived">
-              <a class="sidebar-link" href="index.html">
+              <a class="sidebar-link" href="blank.html">
                 <span class="icon-holder">
                   <i class="c-blue-500 ti-home"></i>
                 </span>
@@ -136,7 +136,7 @@
                 <span class="title">Email</span>
               </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" style="display: none;">
               <a class='sidebar-link' href="compose.html">
                 <span class="icon-holder">
                   <i class="c-blue-500 ti-share"></i>
@@ -168,7 +168,8 @@
                 <span class="title">Charts</span>
               </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" style="display: none;">
+            
               <a class='sidebar-link' href="forms.html">
                 <span class="icon-holder">
                   <i class="c-light-blue-500 ti-pencil"></i>
@@ -176,7 +177,8 @@
                 <span class="title">Forms</span>
               </a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item" style="display: none;">
+            
               <a class="sidebar-link" href="ui.html">
                 <span class="icon-holder">
                     <i class="c-pink-500 ti-palette"></i>
@@ -184,7 +186,8 @@
                 <span class="title">UI Elements</span>
               </a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item" style="display: none;">
+            
               <a class="dropdown-toggle" href="javascript:void(0);">
                 <span class="icon-holder">
                   <i class="c-orange-500 ti-layout-list-thumb"></i>
@@ -222,7 +225,8 @@
                 </li>
               </ul>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item" style="display: none;">
+            
               <a class="dropdown-toggle" href="javascript:void(0);">
                 <span class="icon-holder">
                     <i class="c-red-500 ti-files"></i>
@@ -250,7 +254,7 @@
                 </li>
               </ul>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item" style="display: none;">
               <a class="dropdown-toggle" href="javascript:void(0);">
                 <span class="icon-holder">
                   <i class="c-teal-500 ti-view-list-alt"></i>
@@ -528,65 +532,68 @@
 
 
               <br>
-              <div class="row w-100" style="margin: 0">
-                <div class="masonry-item col-md-3">
-                  <div class="ct-chart ct-golden-section" id="chart1" style="height: 500px; width: 80%;"></div>
-                </div>
-                <div class="masonry-item col-md-3">
-                  <div class="ct-chart ct-golden-section" id="chart2" style="height: 500px; width: 80%;"></div>
-                </div>
-                <div class="masonry-item col-md-3">
-                  <div class="ct-chart ct-golden-section" id="chart3" style="height: 500px; width: 80%;"></div>
-                </div>
-                <div class="masonry-item col-md-3">
-                  <div class="ct-chart ct-golden-section" id="bar" style="height: 488px; width: 99%;"></div>
-                </div>
-              </div>
-              <br>
-
-              <div class="row w-100" style="margin: 0">
-                <div class="masonry-item col-md-3">
-                  <div class="ct-chart ct-golden-section" id="chart4" style="height: 500px; width: 80%;"></div>
-                  <div class="un" id = "" >
-                      <p><b>Тип исследования:</b> GZ4</p>
-                      <p><b>Стоимость:</b> 2450</p>
-                    </dl>
-                    <button type="button" class="btn btn-success btn-lg">Заказать</button>              
+              <div class="row w-100" style="margin: 0;  margin-left: 20px;">
+                <div class="owl-carousel">
+                  <div class="item">
+                    <div class="ct-chart ct-golden-section" id="chart1" style="height: 900px; width: 420px;"></div>
                   </div>
-                </div>
-                <div class="masonry-item col-md-3">
-                  <div class="ct-chart ct-golden-section" id="chart5" style="height: 500px; width: 80%;"></div>
+                  <div class="item">
+                    <div class="ct-chart ct-golden-section" id="chart2" style="height: 900px; width: 420px;" ></div>
+                  </div>
+                  <div class="item">
+                    <div class="ct-chart ct-golden-section" id="chart3" style="height: 900px; width: 420px;"></div>
+                  </div>
+                  <div class="item">
+                    <div class="ct-chart ct-golden-section" id="chart4" style="height: 900px; width: 420px;"></div>
                     <div class="un" id = "" >
-                      <p><b>Тип исследования:</b> GZ5</p>
-                      <p><b>Стоимость:</b> 2450</p>
-                    </dl>
-                    <button type="button" class="btn btn-success btn-lg">Заказать</button>              
-                  </div>
-                </div>
-                <div class="masonry-item col-md-3">
-                  <div class="ct-chart ct-golden-section" id="chart6" style="height: 500px; width: 80%;"></div>
-                    <div class="un" id = "" >
-                      <p><b>Тип исследования:</b> GZ6</p>
-                      <p><b>Стоимость:</b> 2450</p>
-                    </dl>
-                    <button type="button" class="btn btn-success btn-lg">Заказать</button>              
-                  </div>
-                </div>
-                <div class="masonry-item col-md-3">
-                  <div class="bgc-white p-20 bd" style="height: 500px; width: 99%;">
-                    <div class="alert alert-success" role="alert">
-                      Обнаружено сходство с <a href="charts.html?v1=3">Well #3</a>!
+                        <p><b>Тип исследования:</b> GZ4</p>
+                        <p><b>Стоимость:</b> 2450</p>
+                      <button type="button" class="btn btn-success btn-lg">Заказать</button>              
                     </div>
-                    <br>
-                    <h3>Отчет:</h3>
-                    <p>Предлагается сделать допольнительные исследования GZ5 и GZ7, чтобы повысить точность.</p>
-
+                  </div>
+                  <div class="item">
+                    <div class="ct-chart ct-golden-section" id="chart5" style="height: 900px; width: 420px;"></div>
+                      <div class="un" id = "" >
+                        <p><b>Тип исследования:</b> GZ5</p>
+                        <p><b>Стоимость:</b> 2450</p>
+                      <button type="button" class="btn btn-success btn-lg">Заказать</button>              
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="ct-chart ct-golden-section" id="chart6" style="height: 900px; width: 420px;"></div>
+                      <div class="un" id = "" >
+                        <p><b>Тип исследования:</b> GZ6</p>
+                        <p><b>Стоимость:</b> 2450</p>
+                        <button type="button" class="btn btn-success btn-lg">Заказать</button>              
+                      </div>
+                  </div>
+                  <div class="item">
+                    <div class="ct-chart ct-golden-section" id="chart8" style="height: 900px; width: 420px;"></div>
+                  </div>
+                                    <div class="item">
+                    <div class="ct-chart ct-golden-section" id="chart9" style="height: 900px; width: 420px;"></div>
+                  </div>
+                                    <div class="item">
+                    <div class="ct-chart ct-golden-section" id="chart10" style="height: 900px; width: 420px;"></div>
+                  </div>
+                                    <div class="item">
+                    <div class="ct-chart ct-golden-section" id="chart11" style="height: 900px; width: 420px;"></div>
+                  </div>
+                                                      <div class="item">
+                    <div class="ct-chart ct-golden-section" id="chart12" style="height: 900px; width: 420px;"></div>
                   </div>
 
                 </div>
+                 <div class="item" style="width: auto; margin: 0 auto;">
+                    <div class="ct-chart ct-golden-section" id="bar" style="height: 888px; width: 200px; text-align: center;"></div>
+                 </div>
               </div>
-
+              <ul class="pagination justify-content-center" style="width: 70%">
+                  <li class="page-item"><a class="customPrevBtn page-link" style="width:100px; text-align: center;" href="#">Previous</a></li>
+                  <li class="page-item"><a class="customNextBtn page-link" style="width:100px; text-align: center;" href="#">Next</a></li>
+              </ul>
               <br>
+
               <div class="row w-100" style="margin: 0">
                 <div class="col-md-6">
                   <div class="bgc-white p-20 bd">
@@ -596,7 +603,31 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6">
+                <div class="masonry-item col-md-6">
+                  <div class="bgc-white p-20 bd">
+                    <div class="alert alert-success" role="alert">
+                      Обнаружено сходство с <a href="charts.html?v1=3">Well #3</a>!
+                    </div>
+                    <br>
+                    <h3>Отчет:</h3>
+                    <p>Предлагается сделать допольнительные исследования GZ5 и GZ7, чтобы повысить точность.</p>
+                    <br>
+                  
+                  <h3>Комментарий:</h3>
+
+                  <div class="form-group">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary mb-2">Отправить заказчику</button>
+                  </div>
+
+
+                </div>
+                
+              </div>
+              <br>
+
+              <div class="col-md-12">
                     <!-- #Sales Report ==================== -->
                     <div class="bd bgc-white">
                       <div class="layers">
@@ -667,7 +698,6 @@
                       </div>
                     </div>
                 </div>
-              </div>
 
               <div class="masonry-item col-md-6" style="display: none">
                 <div class="bgc-white p-20 bd">
@@ -788,15 +818,18 @@
 
         <style type="text/css">
           .un {
-            text-align: center;
-            padding-top: 180px;
-            width: 75%;
-            position: absolute;
-            height: 500px;
-            background-color: #00000061;
-            top: 0;
-            color: #212529;
-            font-size: 20px;
+    text-align: center;
+    padding-top: 400px;
+    width: 420px;
+    position: absolute;
+    height: 900px;
+    background-color: #000000bf;
+    top: 0;
+    color: #ffffff;
+    font-size: 20px;
+          }
+          .owl-carousel {
+            width: 70%;
           }
         </style>
 

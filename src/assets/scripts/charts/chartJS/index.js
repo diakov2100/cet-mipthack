@@ -2,6 +2,11 @@ import Chart from 'chart.js';
 import { COLORS } from '../../constants/colors';
 import CanvasJS from './canvasjs.min.js';
 
+import "./owl.carousel.min.js";
+
+import {data} from "./test.js";
+
+
 export default (function () {
 
 var url_string = window.location.href;
@@ -10,9 +15,59 @@ var c = url.searchParams.get("v1");
 if (c) {
   document.getElementById("head").innerHTML = "Данные по Well #" + c;
 console.log(c);
+console.log(data[0])
+
+let bk = []; 
+var GZ1 = [], GZ2 = [], GZ3 = [], GZ4 = [], GZ5 = [], GZ6 = [], GZ7= [], DGK= [], NKTM= [], NKTR= [], ALPS= []; 
+for (var item in data) {
+  bk.push({x: data[item]['bk '], y: -data[item]['depth, m ']});
+  GZ1.push({x: data[item]['GZ1 '], y: -data[item]['depth, m ']}) ;
+  GZ2.push({x: data[item]['GZ2 '], y: -data[item]['depth, m ']}) ;
+  GZ3.push({x: data[item]['GZ3 '], y: -data[item]['depth, m ']}) ;
+  GZ4.push({x: data[item]['GZ4 '], y: -data[item]['depth, m ']}) ;
+  GZ5.push({x: data[item]['GZ5 '], y: -data[item]['depth, m ']}) ;
+  GZ7.push({x: data[item]['GZ7 '], y: -data[item]['depth, m ']}) ;
+  DGK.push({x: data[item]['DGK '], y: -data[item]['depth, m ']}) ;
+  NKTR.push({x: data[item]['NKTR '], y: -data[item]['depth, m ']}) ;
+  ALPS.push({x: data[item]['ALPS '], y: -data[item]['depth, m ']}) ;
+  NKTM.push({x: data[item]['NKTM '], y: -data[item]['depth, m ']}) ;
+}
+
+var owl = $('.owl-carousel');
+
+owl.owlCarousel(
+{
+    items: 3,
+    margin: 40,
+});
+
+$('.customNextBtn').click(function() {
+    owl.trigger('next.owl.carousel');
+})
+
+$('.customPrevBtn').click(function() {
+    owl.trigger('prev.owl.carousel', [300]);
+})
+
     // Initialize a Line chart in the container with the ID chart1
 
 var chart = new CanvasJS.Chart("chart1", {
+  animationEnabled: true,
+  theme: "light2",
+  title:{
+    text: "bk"
+  },
+  axisY:{
+    includeZero: false
+  },
+  data: [{        
+    type: "line",       
+    dataPoints: bk
+  }]
+});
+chart.render();
+
+var chart = new CanvasJS.Chart("chart2", {
   animationEnabled: true,
   theme: "light2",
   title:{
@@ -23,18 +78,155 @@ var chart = new CanvasJS.Chart("chart1", {
   },
   data: [{        
     type: "line",       
-    dataPoints: [
-        {x: 0.0, y: -2465.00},
-        {x: 0.6651979286673, y: -2465.546},
-        {x: 0.1151528258196, y: -2465.646},
-        {x: 0.15525366187725, y: -2465.746},
-        {x: 0.1253146285666, y: -2465.8145},
-        {x: 0.0, y: -2467},
-    ]
+    dataPoints: GZ1
   }]
 });
 chart.render();
 
+var chart = new CanvasJS.Chart("chart3", {
+  animationEnabled: true,
+  theme: "light2",
+  title:{
+    text: "GZ2"
+  },
+  axisY:{
+    includeZero: false
+  },
+  data: [{        
+    type: "line",       
+    dataPoints: GZ2
+  }]
+});
+chart.render();
+var chart = new CanvasJS.Chart("chart4", {
+  animationEnabled: true,
+  theme: "light2",
+  title:{
+    text: "GZ3"
+  },
+  axisY:{
+    includeZero: false
+  },
+  data: [{        
+    type: "line",       
+    dataPoints: GZ3
+  }]
+});
+chart.render();
+var chart = new CanvasJS.Chart("chart5", {
+  animationEnabled: true,
+  theme: "light2",
+  title:{
+    text: "GZ4"
+  },
+  axisY:{
+    includeZero: false
+  },
+  data: [{        
+    type: "line",       
+    dataPoints: GZ4
+  }]
+});
+chart.render();
+var chart = new CanvasJS.Chart("chart6", {
+  animationEnabled: true,
+  theme: "light2",
+  title:{
+    text: "GZ5"
+  },
+  axisY:{
+    includeZero: false
+  },
+  data: [{        
+    type: "line",       
+    dataPoints: GZ5
+  }]
+});
+chart.render();
+
+var chart = new CanvasJS.Chart("chart8", {
+  animationEnabled: true,
+  theme: "light2",
+  title:{
+    text: "GZ7"
+  },
+  axisY:{
+    includeZero: false
+  },
+  data: [{        
+    type: "line",       
+    dataPoints: GZ7
+  }]
+});
+chart.render();
+
+
+
+var chart = new CanvasJS.Chart("chart9", {
+  animationEnabled: true,
+  theme: "light2",
+  title:{
+    text: "DGK"
+  },
+  axisY:{
+    includeZero: false
+  },
+  data: [{        
+    type: "line",       
+    dataPoints: DGK
+  }]
+});
+chart.render();
+
+var chart = new CanvasJS.Chart("chart10", {
+  animationEnabled: true,
+  theme: "light2",
+  title:{
+    text: "NKTM"
+  },
+  axisY:{
+    includeZero: false
+  },
+  data: [{        
+    type: "line",       
+    dataPoints: NKTM
+  }]
+});
+chart.render();
+
+var chart = new CanvasJS.Chart("chart11", {
+  animationEnabled: true,
+  theme: "light2",
+  title:{
+    text: "NKTR"
+  },
+  axisY:{
+    includeZero: false
+  },
+  data: [{        
+    type: "line",       
+    dataPoints: NKTR
+  }]
+});
+chart.render();
+
+var chart = new CanvasJS.Chart("chart12", {
+  animationEnabled: true,
+  theme: "light2",
+  title:{
+    text: "ALPS"
+  },
+  axisY:{
+    includeZero: false
+  },
+  data: [{        
+    type: "line",       
+    dataPoints: ALPS
+  }]
+});
+chart.render();
+
+/*
 var chart = new CanvasJS.Chart("chart2", {
   animationEnabled: true,
   theme: "light2",
@@ -56,81 +248,8 @@ var chart = new CanvasJS.Chart("chart2", {
     ]
   }]
 });
-chart.render();
+chart.render();*/
 
-var chart = new CanvasJS.Chart("chart3", {
-  animationEnabled: true,
-  theme: "light2",
-  title:{
-    text: "GZ3"
-  },
-  axisY:{
-    includeZero: false
-  },
-  data: [{        
-    type: "line",       
-    dataPoints: [
-        {x: 0.0, y: -2465.00},
-        {x: 0.6651979286673, y: -2465.546},
-        {x: 0.1151528258196, y: -2465.646},
-        {x: 0.15525366187725, y: -2465.746},
-        {x: 0.1253146285666, y: -2465.8145},
-        {x: 0.0, y: -2467},
-    ]
-  }]
-});
-chart.render();
-
-var chart = new CanvasJS.Chart("chart4", {
-  animationEnabled: true,
-  theme: "light2",
-  title:{
-    text: "GZ4"
-  },
-  axisY:{
-    includeZero: false
-  },
-  data: [{        
-    type: "line",       
-    dataPoints: [
-    ]
-  }]
-});
-
-chart.render();
-var chart = new CanvasJS.Chart("chart5", {
-  animationEnabled: true,
-  theme: "light2",
-  title:{
-    text: "GZ5"
-  },
-  axisY:{
-    includeZero: false
-  },
-  data: [{        
-    type: "line",       
-    dataPoints: [
-    ]
-  }]
-});
-
-chart.render();
-var chart = new CanvasJS.Chart("chart6", {
-  animationEnabled: true,
-  theme: "light2",
-  title:{
-    text: "GZ6"
-  },
-  axisY:{
-    includeZero: false
-  },
-  data: [{        
-    type: "line",       
-    dataPoints: [
-    ]
-  }]
-});
-chart.render();
 
 var chart = new CanvasJS.Chart("bar", {
   animationEnabled: true,
