@@ -160,8 +160,6 @@ var chart = new CanvasJS.Chart("chart8", {
 });
 chart.render();
 
-
-
 var chart = new CanvasJS.Chart("chart9", {
   animationEnabled: true,
   theme: "light2",
@@ -209,7 +207,6 @@ var chart = new CanvasJS.Chart("chart11", {
   }]
 });
 chart.render();
-
 var chart = new CanvasJS.Chart("chart12", {
   animationEnabled: true,
   theme: "light2",
@@ -225,6 +222,181 @@ var chart = new CanvasJS.Chart("chart12", {
   }]
 });
 chart.render();
+
+//second info
+
+var chart = new CanvasJS.Chart("chart21", {
+  animationEnabled: true,
+  theme: "light2",
+  title:{
+    text: "bk"
+  },
+  axisY:{
+    includeZero: false
+  },
+  data: [{        
+    type: "line",       
+    dataPoints: bk
+  }]
+});
+chart.render();
+
+var chart = new CanvasJS.Chart("chart22", {
+  animationEnabled: true,
+  theme: "light2",
+  title:{
+    text: "GZ1"
+  },
+  axisY:{
+    includeZero: false
+  },
+  data: [{        
+    type: "line",       
+    dataPoints: GZ1
+  }]
+});
+chart.render();
+
+var chart = new CanvasJS.Chart("chart23", {
+  animationEnabled: true,
+  theme: "light2",
+  title:{
+    text: "GZ2"
+  },
+  axisY:{
+    includeZero: false
+  },
+  data: [{        
+    type: "line",       
+    dataPoints: GZ2
+  }]
+});
+chart.render();
+var chart = new CanvasJS.Chart("chart24", {
+  animationEnabled: true,
+  theme: "light2",
+  title:{
+    text: "GZ3"
+  },
+  axisY:{
+    includeZero: false
+  },
+  data: [{        
+    type: "line",       
+    dataPoints: GZ3
+  }]
+});
+chart.render();
+var chart = new CanvasJS.Chart("chart25", {
+  animationEnabled: true,
+  theme: "light2",
+  title:{
+    text: "GZ4"
+  },
+  axisY:{
+    includeZero: false
+  },
+  data: [{        
+    type: "line",       
+    dataPoints: GZ4
+  }]
+});
+chart.render();
+var chart = new CanvasJS.Chart("chart26", {
+  animationEnabled: true,
+  theme: "light2",
+  title:{
+    text: "GZ5"
+  },
+  axisY:{
+    includeZero: false
+  },
+  data: [{        
+    type: "line",       
+    dataPoints: GZ5
+  }]
+});
+chart.render();
+
+var chart = new CanvasJS.Chart("chart28", {
+  animationEnabled: true,
+  theme: "light2",
+  title:{
+    text: "GZ7"
+  },
+  axisY:{
+    includeZero: false
+  },
+  data: [{        
+    type: "line",       
+    dataPoints: GZ7
+  }]
+});
+chart.render();
+
+var chart = new CanvasJS.Chart("chart29", {
+  animationEnabled: true,
+  theme: "light2",
+  title:{
+    text: "DGK"
+  },
+  axisY:{
+    includeZero: false
+  },
+  data: [{        
+    type: "line",       
+    dataPoints: DGK
+  }]
+});
+chart.render();
+
+var chart = new CanvasJS.Chart("chart210", {
+  animationEnabled: true,
+  theme: "light2",
+  title:{
+    text: "NKTM"
+  },
+  axisY:{
+    includeZero: false
+  },
+  data: [{        
+    type: "line",       
+    dataPoints: NKTM
+  }]
+});
+chart.render();
+
+var chart = new CanvasJS.Chart("chart211", {
+  animationEnabled: true,
+  theme: "light2",
+  title:{
+    text: "NKTR"
+  },
+  axisY:{
+    includeZero: false
+  },
+  data: [{        
+    type: "line",       
+    dataPoints: NKTR
+  }]
+});
+chart.render();
+var chart = new CanvasJS.Chart("chart212", {
+  animationEnabled: true,
+  theme: "light2",
+  title:{
+    text: "ALPS"
+  },
+  axisY:{
+    includeZero: false
+  },
+  data: [{        
+    type: "line",       
+    dataPoints: ALPS
+  }]
+});
+chart.render();
+
 
 /*
 var chart = new CanvasJS.Chart("chart2", {
@@ -305,6 +477,61 @@ var chart = new CanvasJS.Chart("bar", {
   }]
 });
 chart.render();
+
+/*var chart = new CanvasJS.Chart("bar2", {
+  animationEnabled: true,
+  title:{
+    text: "Model",
+  },
+  theme: "light2",
+  axisX: {
+    interval: 0,
+  },
+  axisY:{
+       title: "",
+       tickLength: 0,
+       lineThickness:0,
+       margin:0,
+       valueFormatString:" " //comment this to show numeric values
+  },
+  data: [{
+    type: "stackedColumn",
+    showInLegend: false,
+    color: "#212529",
+    name: "Q1",
+    dataPoints: [
+      { y: -2465.00},
+    ]
+    },
+    {        
+      type: "stackedColumn",
+      showInLegend: false,
+      name: "Q2",
+      color: "#388e3c",
+      dataPoints: [
+        { y: -2465.446},
+      ]
+    },
+    {        
+      type: "stackedColumn",
+      showInLegend: false,
+      name: "Q3",
+      color: "#212529",
+      dataPoints: [
+        { y: -2465.646},
+      ]
+    },
+    {        
+      type: "stackedColumn",
+      showInLegend: false,
+      name: "Q4",
+      color: "#212529",
+      dataPoints: [
+        { y: -2467},
+      ]
+  }]
+});
+chart.render();*/
 
 
 

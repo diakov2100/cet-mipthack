@@ -121,7 +121,7 @@
           <!-- ### $Sidebar Menu ### -->
           <ul class="sidebar-menu scrollable pos-r">
             <li class="nav-item mT-30 actived">
-              <a class="sidebar-link" href="index.html">
+              <a class="sidebar-link" href="blank.html">
                 <span class="icon-holder">
                   <i class="c-blue-500 ti-home"></i>
                 </span>
@@ -136,7 +136,7 @@
                 <span class="title">Email</span>
               </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" style="display: none;">
               <a class='sidebar-link' href="compose.html">
                 <span class="icon-holder">
                   <i class="c-blue-500 ti-share"></i>
@@ -168,7 +168,8 @@
                 <span class="title">Charts</span>
               </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" style="display: none;">
+            
               <a class='sidebar-link' href="forms.html">
                 <span class="icon-holder">
                   <i class="c-light-blue-500 ti-pencil"></i>
@@ -176,7 +177,8 @@
                 <span class="title">Forms</span>
               </a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item" style="display: none;">
+            
               <a class="sidebar-link" href="ui.html">
                 <span class="icon-holder">
                     <i class="c-pink-500 ti-palette"></i>
@@ -184,7 +186,8 @@
                 <span class="title">UI Elements</span>
               </a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item" style="display: none;">
+            
               <a class="dropdown-toggle" href="javascript:void(0);">
                 <span class="icon-holder">
                   <i class="c-orange-500 ti-layout-list-thumb"></i>
@@ -222,7 +225,8 @@
                 </li>
               </ul>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item" style="display: none;">
+            
               <a class="dropdown-toggle" href="javascript:void(0);">
                 <span class="icon-holder">
                     <i class="c-red-500 ti-files"></i>
@@ -233,9 +237,9 @@
                   </span>
               </a>
               <ul class="dropdown-menu">
-                  <li>
-                      <a class='sidebar-link' href="blank.html">Blank</a>
-                    </li>
+                <li>
+                  <a class='sidebar-link' href="blank.html">Blank</a>
+                </li>                 
                 <li>
                   <a class='sidebar-link' href="404.html">404</a>
                 </li>
@@ -250,7 +254,7 @@
                 </li>
               </ul>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item" style="display: none;">
               <a class="dropdown-toggle" href="javascript:void(0);">
                 <span class="icon-holder">
                   <i class="c-teal-500 ti-view-list-alt"></i>
@@ -511,210 +515,235 @@
             </ul>
           </div>
         </div>
+<style type="text/css">
 
+                  .rounded-circle {
+                        position: absolute;
+                        height: 30px;
+                        width: 30px;
+                        top: 65px;
+                        background-color: #5ecaff;
+                        left: 595px;
+                        border: solid #03a9f4;
+                  }
+                  .rd1 {
+    top: 381px;
+    left: 254px;
+                  }
+                  .rd2 {
+top: 383px;
+    left: 514px;
+                  }
+                  .rd3 {
+top: 187px;
+    left: 199px;
+
+                  }
+                  .rd4 {
+top: 100px;
+    left: 506px;
+
+                  }
+                  .rd5 {top: 5px;
+    left: 311px;
+
+                  }
+                  .rounded-circle .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.rounded-circle:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
         <!-- ### $App Screen Content ### -->
         <main class='main-content bgc-grey-100'>
           <div id='mainContent'>
             <div class="container-fluid">
-              <h4 class="c-grey-900 mT-10 mB-30">Basic Tables</h4>
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="bgc-white bd bdrs-3 p-20 mB-20">
-                    <h4 class="c-grey-900 mB-20">Simple Table</h4>
-                    <p>Using the most basic table markup, here’s how <code class="highlighter-rouge">.table</code>-based tables look in Bootstrap. <strong>All table styles are inherited in Bootstrap 4</strong>, meaning any nested tables will be styled in the same manner as the parent.</p>
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th scope="col">#</th>
-                          <th scope="col">First Name</th>
-                          <th scope="col">Last Name</th>
-                          <th scope="col">Username</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td>@twitter</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
+
+              <div class="bd bgc-white">
+
+                      <div class="layers">
+                      <div class="layer w-100 p-20">
+                        <h2 class="lh-1">Карта месторождения</h2>
+                      </div>
+                        <div class="layer w-100 interactive-image" style="text-align: left;  position: relative;">
+                          <img src="assets/static/images/map.png">
+                          <div class="rounded-circle rd1"><span class="tooltiptext">Well #1</span></div>
+                          <div class="rounded-circle rd2"><span class="tooltiptext">Well #2</span></div>
+                          <div class="rounded-circle rd3"><span class="tooltiptext">Well #3</span></div>
+                          <div class="rounded-circle rd4"><span class="tooltiptext">Well #4</span></div>
+                          <div class="rounded-circle rd5"><span class="tooltiptext">Well #5</span></div>
+                        </div>
+                      </div>
               </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="bgc-white bd bdrs-3 p-20 mB-20">
-                    <h4 class="c-grey-900 mB-20">Table head options</h4>
-                    <p>Similar to tables and dark tables, use the modifier classes <code class="highlighter-rouge">.thead-light</code> or <code class="highlighter-rouge">.thead-dark</code> to make <code class="highlighter-rouge">&lt;thead&gt;</code>s appear light or dark gray.</p>
-                    <table class="table">
-                      <thead class="thead-dark">
-                        <tr>
-                          <th scope="col">#</th>
-                          <th scope="col">First Name</th>
-                          <th scope="col">Last Name</th>
-                          <th scope="col">Username</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td>@twitter</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
+<br>
+
+              <div class="bgc-white p-20 bd">
+                <h3 id="hd" class="c-grey-900 mT-10 mB-0">Well #1</h3>
               </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="bgc-white bd bdrs-3 p-20 mB-20">
-                    <h4 class="c-grey-900 mB-20">Striped rows</h4>
-                    <p>Use <code class="highlighter-rouge">.table-striped</code> to add zebra-striping to any table row within the <code class="highlighter-rouge">&lt;tbody&gt;</code>.</p>
-                    <table class="table table-striped">
-                      <thead>
-                        <tr>
-                          <th scope="col">#</th>
-                          <th scope="col">First Name</th>
-                          <th scope="col">Last Name</th>
-                          <th scope="col">Username</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td>@twitter</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+                <br>
+              <div class="bgc-white p-20 bd">
+                <h3>Проведенные исследования</h3>
+              <br>
+              <h5 style="margin-left: 180px">Польза</h5>
+                <div class="row" style="margin-left: 0px;">
+                  <button type="button" class="btn btn-success ">GZ1</button>
+                  <input type="range" min="1" max="100" id="gz1" value="90" class="slider" id="myRange">
+                  <h4 style="margin-left: 20px;">18 Сентября</h4>
+                  <h4 style="margin-left: 20px;">$930 k</h4>
                 </div>
+<br>
+              <div class="row" style="margin-left: 0px;">
+                <button type="button" class="btn btn-success ">GZ2</button>
+                <input type="range" min="1" max="100"  id="gz2" value="50" class="slider" id="myRange">
+                <h4 style="margin-left: 20px;">14 Сентября</h4>
+                <h4 style="margin-left: 20px;">$445 k</h4>
               </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="bgc-white bd bdrs-3 p-20 mB-20">
-                    <h4 class="c-grey-900 mB-20">Bordered table</h4>
-                    <p>Add <code class="highlighter-rouge">.table-bordered</code> for borders on all sides of the table and cells.</p>
-                    <table class="table table-bordered">
-                      <thead>
-                        <tr>
-                          <th scope="col">#</th>
-                          <th scope="col">First Name</th>
-                          <th scope="col">Last Name</th>
-                          <th scope="col">Username</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@TwBootstrap</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">4</th>
-                          <td colspan="2">Larry the Bird</td>
-                          <td>@twitter</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
+<br>
+              <div class="row" style="margin-left: 0px;">
+                <button type="button" class="btn btn btn-danger">GZ3</button>
+                <input type="range" min="1" max="100" id="gz3" value="40" class="slider red" id="myRange">
+                <h4 style="margin-left: 20px;">12 Сентября</h4>
+                <h4 style="margin-left: 20px;">-$930 k</h4>
               </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="bgc-white bd bdrs-3 p-20">
-                    <h4 class="c-grey-900 mB-20">Hoverable rows</h4>
-                    <p>Add <code class="highlighter-rouge">.table-hover</code> to enable a hover state on table rows within a <code class="highlighter-rouge">&lt;tbody&gt;</code>.</p>
-                    <table class="table table-hover">
-                      <thead>
-                        <tr>
-                          <th scope="col">#</th>
-                          <th scope="col">First Name</th>
-                          <th scope="col">Last Name</th>
-                          <th scope="col">Username</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td colspan="2">Larry the Bird</td>
-                          <td>@twitter</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
+<br>
+<br>
+<br>
+
+              <div class="row" style="margin-left: 0px;">
+                <h2><span class="badge badge-dark" style="width: 100px;">Brent</span></h2>
+                <input type="range" min="1" max="100" value="50" id="br" class="slider black" id="myRange">
+                <h2 style="margin-left: 20px;" id="br_val">$62.5</h2>
               </div>
+              <div class="row" style="margin-left: 0px;">
+                <h2><span class="badge badge-secondary" style="margin-right: 20px; width: 100px;">Min</span></h2>
+                <h2><span class="badge badge-success">$0.72 млн</span></h2>
+              </div>
+
+              <div class="row" style="margin-left: 0px;">
+                <h2><span class="badge badge-secondary" style="margin-right: 20px; width: 100px;">Max</span></h2>
+                <h2><span class="badge badge-success">$4.65 млн</span></h2>
+              </div>
+              
+              <div class="row" style="margin-left: 0px;">
+                <h2><span class="badge badge-secondary"  style="margin-right: 20px; width: 100px;">Разброс</span></h2>
+                <h2><span class="badge badge-success">74%</span></h2>
+              </div>
+
+            </div>
+            <br>
+            <div class="bgc-white p-20 bd">
+              <h3>Исследования</h3>
+    <table class="table">
+    <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"><h3><span class="badge badge-dark">Время</span></h3></th>
+      <th scope="col"><h3><span class="badge badge-dark">Цена</span></h3></th>
+      <th scope="col"><h3><span class="badge badge-dark">VOI</span></h3></th>
+      <th scope="col"><h3><span class="badge badge-dark">R_VOI</span></h3></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td><h3>bk</h3></td>
+      <td><h3>DGK</h3></td>
+      <td><h3>NKTR</h3></td>
+      <td><h3>NALPS</h3></td>
+      <td><h3><span class="badge badge-secondary">8 дней</span></h3></td>
+      <td><h3><span class="badge badge-success">$109.510</span></h3></td>
+      <td><h3><span class="badge badge-success">$5.1 млн</span></h3></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><h3>bk</h3></td>
+      <td><h3>DGK</h3></td>
+      <td></td>
+      <td></td>
+      <td><h3><span class="badge badge-secondary">2 дня</span></h3></td>
+      <td><h3><span class="badge badge-success">$109.510</span></h3></td>
+      <td><h3><span class="badge badge-success">$5.1 млн</span></h3></td>
+      <td><h3><span class="badge badge-success">$1.28 млн</span></h3></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td></td>
+      <td></td>
+      <td><h3>NKTR</td>
+      <td><h3>ALPS</td>
+      <td><h3><span class="badge badge-secondary">6 дней</span></h3></td>
+      <td><h3><span class="badge badge-success">$109.510</span></h3></td>
+      <td><h3><span class="badge badge-success">$3.1 млн</span></h3></td>
+      <td><h3><span class="badge badge-success">$1.28 млн</span></h3></td>
+    </tr>
+  </tbody>
+</table>
             </div>
           </div>
         </main>
+<style>
 
+.slider {
+  -webkit-appearance: none;
+  width: 300px;
+  height: 42px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  margin-left: 20px;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+.red::-webkit-slider-thumb  {
+background: #f44336;
+}
+.red::-moz-range-thumb {
+  background: #f44336;
+}
+.black::-webkit-slider-thumb  {
+background: #000;
+}
+.black::-moz-range-thumb {
+  background: #000;
+}
+</style>
         <!-- ### $App Screen Footer ### -->
         <footer class="bdT ta-c p-30 lh-0 fsz-sm c-grey-600">
           <span>Copyright © 2017 Designed by <a href="https://colorlib.com" target='_blank' title="Colorlib">Colorlib</a>. All rights reserved.</span>
